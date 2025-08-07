@@ -1,0 +1,318 @@
+     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Old+Standard+TT:wght@400;700&display=swap');
+        
+        :root {
+            --paper: #f5f0e5;
+            --ink: #222;
+            --accent: #8b0000;
+            --old-print: #d9c7b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #333 url('https://www.transparenttextures.com/patterns/paper-1.png');
+            padding: 40px 20px;
+        }
+        
+        .jornal {
+            width: 900px;
+            margin: 0 auto;
+            background-color: var(--paper);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5), 
+                        inset 0 0 100px var(--old-print);
+            padding: 40px 50px;
+            position: relative;
+            border: 1px solid #999;
+            transform: rotate(0.3deg);
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            overflow: hidden;
+        }
+        
+        .jornal::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                rgba(245, 240, 229, 0.1),
+                rgba(245, 240, 229, 0.2) 20%,
+                rgba(245, 240, 229, 0.3) 40%,
+                rgba(217, 199, 184, 0.6) 100%
+            );
+            pointer-events: none;
+        }
+        
+        /* CABEÇALHO */
+        .cabecalho {
+            border-bottom: 3px double var(--ink);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .titulo-jornal {
+            font-family: 'Old Standard TT', serif;
+            font-size: 82px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+            color: var(--ink);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .titulo-jornal::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .slogan {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            font-style: italic;
+            letter-spacing: 1px;
+            color: var(--ink);
+        }
+        
+        .info-data {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 14px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* MENU DE NAVEGAÇÃO */
+        .menu-navegacao {
+            background-color: var(--accent);
+            padding: 12px 0;
+            margin-bottom: 30px;
+            border-top: 1px solid var(--ink);
+            border-bottom: 1px solid var(--ink);
+        }
+        
+        .menu-lista {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        .menu-item {
+            margin: 0 15px;
+            position: relative;
+        }
+        
+        .menu-item:not(:last-child)::after {
+            content: "|";
+            position: absolute;
+            right: -15px;
+            color: white;
+        }
+        
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .menu-link:hover {
+            color: #ffcc00;
+        }
+        
+        /* CONTEÚDO PRINCIPAL */
+        .conteudo-principal {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        /* MANCHETE PRINCIPAL */
+        .manchete {
+            grid-column: 1 / -1;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 20px;
+        }
+        
+        .titulo-manchete {
+            font-family: 'Old Standard TT', serif;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+        
+        .subtitulo-manchete {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 22px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* NOTÍCIAS */
+        .noticia {
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #999;
+            padding-bottom: 20px;
+        }
+        
+        .noticia:last-child {
+            border-bottom: none;
+        }
+        
+        .titulo-noticia {
+            font-family: 'Old Standard TT', serif;
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .imagem-noticia {
+            width: 100%;
+            border: 1px solid var(--ink);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            margin: 15px 0;
+            filter: sepia(30%) contrast(110%);
+        }
+        
+        .legenda {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        
+        .texto-noticia {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+            hyphens: auto;
+        }
+        
+        .leia-mais {
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+            font-style: italic;
+        }
+        
+        /* BARRA LATERAL */
+        .barra-lateral {
+            border-left: 1px solid var(--ink);
+            padding-left: 20px;
+        }
+        
+        .titulo-secao {
+            font-family: 'Old Standard TT', serif;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 5px;
+        }
+        
+        /* RODAPÉ */
+        .rodape {
+            border-top: 1px solid var(--ink);
+            padding-top: 15px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contato {
+            margin-top: 10px;
+        }
+        
+        .copyright {
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        /* ELEMENTOS DECORATIVOS */
+        .selo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 100px;
+            opacity: 0.8;
+            transform: rotate(15deg);
+            filter: sepia(50%);
+        }
+        
+        .preco {
+            position: absolute;
+            top: 140px;
+            right: 40px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 14px;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        }
+        
+        .decoracao-canto {
+            position: absolute;
+            width: 80px;
+            opacity: 0.1;
+        }
+        
+        .canto-superior-esquerdo {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .canto-superior-direito {
+            top: 10px;
+            right: 10px;
+            transform: rotate(90deg);
+        }
+        
+        .canto-inferior-esquerdo {
+            bottom: 10px;
+            left: 10px;
+            transform: rotate(270deg);
+        }
+        
+        .canto-inferior-direito {
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(180deg);
+        }
+        
+        /* EFEITO DE LETRA INICIAL */
+        .letra-inicial::first-letter {
+            float: left;
+            font-size: 75px;
+            line-height: 60px;
+            padding-right: 8px;
+            margin-top: 5px;
+            font-family: 'Old Standard TT', serif;
+        }

@@ -156,7 +156,6 @@ tr:hover {
     font-size: 0.9rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .profile-header h1 {
         font-size: 2rem;
@@ -194,4 +193,30 @@ tr:hover {
     .skills-main h2 {
         font-size: 1.3rem;
     }
+}
+a[href="index1.html"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 15px 0;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+a[href="index1.html"]:hover {
+    color: #2563eb;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 5px;
+}
+
+a[href="index1.html"]::after {
+    content: "→";
+    transition: transform 0.3s ease;
+}
+
+a[href="index1.html"]:hover::after {
+    transform: translateX(3px);
 }
