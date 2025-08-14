@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Igreja Santo Antônio - Protetor das coisas perdidas">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="brasao_santo_antonio.png" type="image/x-icon">
+    <title>Igreja Santo Antônio</title>
+</head>
+<body>
+    <!-- Background fixo com parallax -->
+    <div class="parallax-bg"></div>
+    
+    <header class="header">
+        <div class="nav-container">
+            <nav class="nav-bar">
+                <div class="logo">
+                    <img src="brasao_santo_antonio.png" alt="Brasão de Santo Antônio">
+                    <span>Igreja Santo Antônio</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#historia">Nossa história</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <button class="btn-cadastro" onclick="cadastro()">Cadastre-se</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section com conteúdo sobre a imagem de fundo -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Capela Santo Antônio</h1>
+                <p class="subtitle">Santo Antônio, o protetor das coisas perdidas</p>
+                <p class="description">Venha conhecer nossa história e participar de nossos serviços religiosos.</p>
+                <a href="#historia" class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+        </section>
+
+        <!-- Demais seções do conteúdo -->
+        <section id="historia" class="content-section history-section">
+            <div class="section-container">
+                <h2>Nossa História</h2>
+                <p>A Capela Santo Antônio foi fundada em 2023, com o objetivo de ser um espaço de acolhimento e espiritualidade para a comunidade. Desde então, temos nos dedicado a promover eventos religiosos, sociais e culturais, sempre com o intuito de fortalecer os laços entre os fiéis e a fé cristã.</p>
+            </div>
+        </section>
+
+            <section id="sobre" class="content-section about-section">
+                <div class="section-container">
+                    <h2>Sobre Nós</h2>
+                    <p>Nossa missão é proporcionar um ambiente acolhedor e espiritual, onde todos possam encontrar conforto e esperança. Acreditamos na importância da fé e da comunidade, e trabalhamos para ser um farol de luz em tempos de dificuldade.</p>
+                    
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <h3>Nossas Atividades</h3>
+                            <ul>
+                                <li>Missas aos domingos às 10h</li>
+                                <li>Atividades para crianças e jovens</li>
+                                <li>Eventos sociais e culturais</li>
+                                <li>Grupo de oração todas as quartas-feiras</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about-item">
+                            <h3>Nossos Padres</h3>
+                            <p>Padre João, Padre Pedro e Padre Lucas são os responsáveis por conduzir nossas missas e eventos. Eles estão sempre disponíveis para ouvir e orientar os fiéis em suas jornadas espirituais.</p>
+                        </div>
+                        
+                        <div class="about-item">
+                            <h3>Localização</h3>
+                            <p>📍 R. Eng. Paulo Roberto Corrêa da Silva, N°156</p>
+                            <div class="map-container">
+                                <!-- Espaço para incorporar mapa posteriormente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicos" class="content-section services-section">
+                <div class="section-container">
+                    <h2>Nossos Serviços</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3>Missas</h3>
+                            <p>Segunda a Sexta: 7h e 19h<br>
+                            Sábado: 8h e 18h<br>
+                            Domingo: 8h, 10h e 19h</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Batizados</h3>
+                            <p>Primeiro sábado de cada mês às 15h</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Casamentos</h3>
+                            <p>Agendamento necessário com 3 meses de antecedência</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Confissões</h3>
+                            <p>Terças e quintas das 16h às 18h</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato" class="content-section contact-section">
+                <div class="section-container">
+                    <h2>Contato</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 8h às 18h<br>
+                Sábado: 8h às 12h<br>
+                Domingo: 7h às 20h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>📞 (19) 98080-7070<br>
+                ✉️ contato@igrejasantoantonio.com.br</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="whatsapp.png" alt="whatsapp"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function cadastro() {
+            // Função para cadastro será implementada aqui
+            alert('Cadastro em breve disponível!');
+        }
+    </script>
+</body>
+</html>
