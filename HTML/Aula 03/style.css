@@ -1,0 +1,30 @@
+        h1{
+            font-family: 'Times New Roman', Times, serif; /*Define a fonte a ser usada na frase*/
+            color: whitesmoke; /*define a cor da fonte*/ 
+            background-color: rgb(189, 90, 235);/*define a cor de trás da fonte */
+            text-align: center; /* Define que a frase estará no centro*/
+            padding: 10px; /*Define o tamanho do background*/
+            margin-left: 300px;  /*Define o tamanho da margem do lado esquerda(left)*/
+            height: 150px; /*Define a altura do H1*/
+            /*width: 100px; Define o comprimeto do h1*/
+        }
+        h1:hover{ /*Configura após passar o mouse*/
+            color: blue;
+            background-color: rgb(237, 108, 108);
+            padding: 15px
+
+        }
+        h2{
+            color: magenta;
+            background-color: blue;
+            text-align: center;
+            padding: 10px;
+            margin-right:50px;
+            height:150px;
+            /*width: 100px;*/
+        }
+        h2:hover{
+            color: rgb(255, 255, 255);
+            background: white; 
+            padding: 20px;
+        }

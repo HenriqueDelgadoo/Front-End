@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Animada - CSS Melhorado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #ff6f61;
+            --color-secondary: #ffcc00;
+            --color-accent: #066ad7;
+            --color-dark: #112405;
+            --color-light: #fffbf4;
+            --color-card: #d0eef7;
+            --color-card-dark: #0884ff;
+            --font-main: 'Press Start 2P', cursive;
+        }
+        
+        body {
+            background-color: var(--color-light);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-card-dark) 100%);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--color-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, transparent 50%, rgba(255,255,255,0.1) 50%),
+                linear-gradient(transparent 50%, rgba(255,255,255,0.1) 50%);
+            background-size: 10px 10px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .titulo {
+            font-family: var(--font-main);
+            font-size: 36px;
+            color: var(--color-light);
+            text-align: center;
+            text-shadow: 3px 3px 0 #000, 5px 5px 0 var(--color-secondary);
+            margin: 10px 0 5px;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -1px;
+        }
+        
+        .sub_titulo {
+            font-family: var(--font-main);
+            font-size: 20px;
+            color: var(--color-light);
+            text-align: center;
+            text-shadow: 2px 2px 0 #000, 4px 4px 0 var(--color-secondary);
+            margin: 10px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .descricao_site {
+            font-family: var(--font-main);
+            text-align: center;
+            font-size: 12px;
+            color: var(--color-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: 1px 1px 0 #000;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-container {
+            background: var(--color-accent);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 4px solid var(--color-secondary);
+            position: relative;
+        }
+        
+        .section-container::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 2px dashed var(--color-light);
+            border-radius: 5px;
+            pointer-events: none;
+        }
+        
+        .principais {
+            font-family: var(--font-main);
+            font-size: 24px;
+            color: var(--color-light);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 #000;
+        }
+        
+        .principais::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: var(--color-secondary);
+            border-radius: 2px;
+        }
+        
+        .desenhos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .desenho-card {
+            background: var(--color-card-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--color-dark);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 3px solid var(--color-secondary);
+        }
+        
+        .desenho-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .desenho-card h3 {
+            font-family: var(--font-main);
+            font-size: 16px;
+            color: var(--color-light);
+            padding: 1rem;
+            text-align: center;
+            background: var(--color-dark);
+            margin: 0;
+            text-shadow: 2px 2px 0 #000;
+        }
+        
+        .desenho-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            border-bottom: 3px solid var(--color-secondary);
+            border-top: 3px solid var(--color-secondary);
+        }
+        
+        .desenho-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .desenho-card p {
+            font-family: var(--font-main);
+            padding: 1.5rem;
+            margin: 0;
+            color: var(--color-light);
+            font-size: 10px;
+            line-height: 1.6;
+            text-shadow: 1px 1px 0 #000;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer {
+            background: var(--color-dark);
+            color: var(--color-light);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-family: var(--font-main);
+            font-size: 10px;
+            text-shadow: 1px 1px 0 #000;
+            border-top: 5px solid var(--color-secondary);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 15px;
+            background: var(--color-secondary);
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
+        
+        /* Efeitos de glitch nos títulos */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        
+        .titulo:hover, .sub_titulo:hover, .principais:hover {
+            animation: glitch 0.5s infinite;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 24px;
+            }
+            
+            .sub_titulo {
+                font-size: 14px;
+            }
+            
+            .principais {
+                font-size: 18px;
+            }
+            
+            .desenhos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Efeito de fita cassete */
+        .cassette-tape {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            width: 60px;
+            height: 40px;
+            background: #444;
+            border-radius: 5px;
+            transform: rotate(10deg);
+            z-index: 3;
+        }
+        
+        .cassette-tape::before,
+        .cassette-tape::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #222;
+            border-radius: 50%;
+            top: 10px;
+        }
+        
+        .cassette-tape::before {
+            left: 10px;
+        }
+        
+        .cassette-tape::after {
+            right: 10px;
+        }
+        
+        /* Efeito de TV antiga */
+        .tv-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tv-effect::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 10px 10px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .tv-effect::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="cassette-tape"></div>
+        <h1 class="titulo">Nostalgia Animada:</h1>
+        <h2 class="sub_titulo">Desenhos do anos 80 e 90</h2>
+        <p class="descricao_site">Site para apresentação de desenhos animados do anos 80's e 90's, embarque nessa viagem no tempo conosco</p>
+    </div>
+
+    <section id="desenhos" class="content-section desenhos-section">
+        <div class="section-container">
+           <h2 class="principais">Principais desenhos:</h2> 
+                <div class="desenhos-grid">
+                    <div class="desenho-card tv-effect">
+                        <h3>Pepe Legal</h3>
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.c6w8Slgr8YXoGbvFPKJnLwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem do desenho pepe legal">
+                        <p>Pepe legal é um cavalo xerife gago que usava seu violão para combater o crime no velho-oeste, junto ao seu amigo babalu o burrinho embarcam em diversas aventuras</p>
+                    </div>
+                    <div class="desenho-card tv-effect">
+                        <h3>Penelope charmosa</h3>
+                        <img src="https://1.bp.blogspot.com/-EeLBXgJVlvk/UioCjJdwVZI/AAAAAAAAC3w/1A4Gbal61cs/s1600/Penelope+Charmosa+(1).jpg" alt="Imagem do desenho penelope charmosa">
+                        <p>Penelope charmosa, a herdeira de toda a grana da familia charmosa aproveita a vida viajando pelo mundo, enquanto seu consultor - "Tião o gavião"- tenta de qualquer maneira acabar com ela com armadilhas e assim livrar-se dela.</p>
+                    </div>
+                    <div class="desenho-card tv-effect">
+                        <h3>He-man e os mestres do universo</h3>
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.mI-EIND355IUN-XiYWQNzwHaDV?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem do desenho He-man">
+                        <p>Um dos desenhos mais populares dos anos 80's He-man conta a história do príncipe Adam, que empunhando sua espara e gritando "Pelos poderes de Grayskull" recebia poderes secretos o transformando em He-mam, "O homem mais poderoso do universo".</p>
+                    </div>
+           </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Todos os direitos reservados! Delgado,Henrique - 2025</p>
+    </footer>
+</body>
+</html>
