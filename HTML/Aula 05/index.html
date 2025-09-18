@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    /* h1{
+        width: 300px;
+        height: 50px;
+        background-color: lightgray;
+        border-width: 10px;
+        border-style: solid;
+        border-color:red;
+        padding: 20px;
+        outline-width: 20px;
+        outline-style: solid;
+        outline-color: blue;
+        margin: 50px;
+        text-align: center;
+    } */
+    .number-1{
+        border:10px solid red;
+        outline: 30px solid blue;;
+        padding: 10px 15px 20px 25px;
+        background-color: lightgray;
+        /* margin: 0px 10px 20px 25px; */
+        margin:auto;
+        text-align: center;
+        
+    }
+body{
+    font: lem arial, helvetica, sans-serif;
+    background-color: peachpuff;
+}
+article#caixa{
+    background-color: snow;
+    width: 400px;
+    margin: auto;
+    padding: 1px 10px;
+    box-shadow: -3px 5px 4px  black;
+    border-radius: 20px;
+}
+article#caixa :hover{
+    color: white;
+    background-color: gray;
+}
+</style>
+<body>
+
+    <header>
+        <h1 class="number-1">
+            Block level
+        </h1>
+        <br>
+        <nav clas="nav">
+            link
+        </nav>
+        <main>
+            <section>
+                <p>section 1</p>
+                <article id="caixa">
+                    <p>sub-sessão</p>
+                    <aside>
+                        <p>sub da sub sessão</p>
+                    </aside>
+                </article>
+            </section>
+        </main>
+    </header>
+</body>
+</html>

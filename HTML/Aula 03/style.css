@@ -1,5 +1,5 @@
         h1{
-            font-family: 'Times New Roman', Times, serif; /*Define a fonte a ser usada na frase*/
+            font-family:Ubuntu Static, ; /*Define a fonte a ser usada na frase*/
             color: whitesmoke; /*define a cor da fonte*/ 
             background-color: rgb(189, 90, 235);/*define a cor de trás da fonte */
             text-align: center; /* Define que a frase estará no centro*/
