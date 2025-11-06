@@ -1,0 +1,38 @@
+:root{
+    --cor1: #ff2626;
+    --cor2: #fff;
+    --cor3: black;
+    --font1: Arial;
+
+}
+
+body{
+    background-color: var(--cor1);
+    font-family:  var(--font1);
+    line-height: 1.5em;
+    color: var(--cor3);
+
+}
+h1{
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.466);
+    text-align: center;
+}
+div.video{
+    position:relative;
+    background-color: var(--cor1);
+    height: 450px;
+    /* margin-left: -20px;
+    margin-right: -20px; */
+    margin-bottom: 15px;
+    padding-bottom: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%
+}
